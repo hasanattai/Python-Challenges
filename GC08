@@ -1,0 +1,15 @@
+print('Body Mass Index Calculator')
+weight = int(input('How much do you weigh in Kilograms? '))
+height = float(input('How tall are you in metres? '))
+
+heightsquared = height * height
+BMI = weight / heightsquared
+
+print('Your BMI is %.2f' % BMI)
+
+if BMI < 18.5:
+    print('I bet even a toothpick has more meat than you')
+elif 18.5 <= BMI < 25:
+    print('Quite showing off your beach bod, not everybody has so little life that they live in a gym.')
+else:
+    print('DROP THE ICE CREAM AND GIMME 10 LAPS')
