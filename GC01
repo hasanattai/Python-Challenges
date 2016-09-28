@@ -1,0 +1,15 @@
+import random
+
+MyNumber = random.randrange(0, 100)
+print(MyNumber)
+print("Welcome to the number guessing game, Im thinking of a number between 0 and 100")
+
+while True:
+    Guess = int(input("What is my number?"))
+    if Guess == MyNumber:
+        print('Correct!')
+        break
+    elif Guess < MyNumber:
+        print('Bigger than that!')
+    elif Guess > MyNumber:
+        print('Smaller than that!')
