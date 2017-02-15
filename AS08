@@ -1,0 +1,54 @@
+import random
+
+Player_score = 0
+Comp_score = 0
+
+
+while True:
+    Player_choice = 0
+    Comp_choice = random.choice(['rock','paper','scissors'])
+    while Player_choice < 1 or Player_choice > 4:
+        Player_choice = int(input('1. Rock \n'
+                          '2. Paper \n'
+                          '3. Scissors \n'
+                          '4. End '))
+    if Player_choice == 4:
+        print('Final scores are:'
+              '\nPlayer: %d'
+              '\nComputer: %d' %(Player_score,Comp_score))
+        break
+    if Player_choice == 1 and Comp_choice == 'scissors':
+        Player_score += 1
+        print('Computer threw ' + Comp_choice +
+        '\nYOU WIN')
+    if Player_choice == 2 and Comp_choice == 'rock':
+        Player_score += 1
+        print('Computer threw ' + Comp_choice +
+        '\nYOU WIN')
+    if Player_choice == 3 and Comp_choice == 'paper':
+        Player_score += 1
+        print('Computer threw ' + Comp_choice +
+        '\nYOU WIN')
+    if Player_choice == 3 and Comp_choice == 'scissors':
+        print('Computer also threw ' + Comp_choice +
+        '\nIts a TIE')
+    if Player_choice == 2 and Comp_choice == 'paper':
+        print('Computer also threw ' + Comp_choice +
+        '\nIts a TIE')
+    if Player_choice == 1 and Comp_choice == 'rock':
+        print('Computer also threw ' + Comp_choice +
+        '\nIts a TIE')
+    if Player_choice == 1 and Comp_choice == 'paper':
+        Comp_score += 1
+        print('Computer threw ' + Comp_choice +
+        '\nYOU LOSE')
+    if Player_choice == 2 and Comp_choice == 'scissors':
+        Comp_score += 1
+        print('Computer threw ' + Comp_choice +
+        '\nYOU LOSE')
+    if Player_choice == 3 and Comp_choice == 'rock':
+        Comp_score += 1
+        print('Computer threw ' + Comp_choice +
+        '\nYOU LOSE')
+    else:
+        print('Please choose a valid a option: from 1 to 4')
