@@ -9,9 +9,7 @@ def sort_numbers():
 
     for i in range(0, len(numbers) - 1,):
         for j in range(0, len(numbers) - 1):
-            if numbers[0] < numbers[1] < numbers[2] < numbers[3] < numbers[4] < numbers[5]:
-                break
-            elif numbers[j] > numbers[j + 1]:
+            if numbers[j] > numbers[j + 1]:
                 x = numbers[j]
                 numbers[j] = numbers[j + 1]
                 numbers[j + 1] = x
