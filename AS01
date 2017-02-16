@@ -15,7 +15,6 @@ def sort_numbers():
                 x = numbers[j]
                 numbers[j] = numbers[j + 1]
                 numbers[j + 1] = x
-            print(numbers)
         print(numbers)
 
 numbers = []
