@@ -1,0 +1,22 @@
+import random
+
+def generate_numbers(numbers):
+    for i in range(6):
+        numbers.append(random.randint(0,50))
+    print(numbers)
+
+numbers = []
+
+def linear_search():
+    number_needed = int(input('Input a number: '))
+    x = 0
+    found = False
+    while x < len(numbers) and found == 0:
+        if numbers[x] == number_needed:
+            found = True
+            print(x)
+        x = x + 1
+        found = False
+
+generate_numbers(numbers)
+linear_search()
